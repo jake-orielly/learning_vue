@@ -1,0 +1,21 @@
+html, body {
+    margin: 5px 5px 5px 1em;
+    padding: 0;
+}
+
+.clickable {
+    cursor:pointer;
+    text-decoration: underline;
+    user-select: none;
+}
+
+#total {
+    float:left;
+    margin: 0 4em 0 2em;
+    padding-bottom: 10em;
+}
+
+#cart-div {
+    outline: 1px solid black;
+    padding: 1em;
+}

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="shop.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+        <div id="app">
+            <h1>{{ welcome_message }}</h1>
+            <div class="spacer"></div>
+            <p>Click any item to purchase it.</p>
+            <ul>
+                <menu-item
+                    v-for="item in flavors"
+                    v-bind:item="item"
+                ></menu-item>
+            </ul>
+            <div v-if="total_cost" id="cart-div">
+                <p id="total">Total: ${{total_cost}}</p>
+                <ul>
+                    <li v-for="item in inventory">
+                            {{item.name}} x{{ item.amount }}
+                    </li>
+                </ul>
+                <span v-if="status_message">{{ status_message}}</span>
+            </div>
+        </div>
+        
+        <script src="shop.js"></script>
+    </body>
+</html>
